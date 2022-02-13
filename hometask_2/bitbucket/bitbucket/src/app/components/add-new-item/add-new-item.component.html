@@ -1,0 +1,19 @@
+<form *ngIf="show" class="add-form" (ngSubmit)="onFormSubmit()">
+  <div>
+    <input
+      type="text"
+      name="text"
+      [(ngModel)]="text"
+      id="text"
+      placeholder="Item name"
+    />
+  </div>
+
+  <div>
+    <button class="add" type="submit">Add</button>
+    <button class="cancel" type='button'>Cancel</button>
+  </div>
+
+</form>
+
+

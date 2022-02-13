@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <div class="row" (click)="toggleUncompletedToDos(); rotateChevron('uncompleted')">
+      <h3>Uncompleted</h3>
+      <fa-icon [ngClass]="rotateUncompletedArrow ? 'fa-rotate-180' : 'fa-rotate-360'" [icon]="faArrowDown"></fa-icon>
+    </div>
+    <ng-container *ngFor="let todo of toDoArr">
+      <app-todo-item *ngIf="!todo.done && uncompletedVisible" [todo]="todo"></app-todo-item>
+    </ng-container>
+  </div>
+  <div>
+    <div class="row" (click)="toggleCompletedToDos(); rotateChevron('completed')">
+      <h3>Completed</h3>
+      <fa-icon [ngClass]="rotateCompletedArrow ? 'fa-rotate-180' : 'fa-rotate-360'" [icon]="faArrowDown"></fa-icon>
+    </div>
+    <ng-container *ngFor="let todo of toDoArr">
+      <app-todo-item *ngIf="todo.done && completedVisible" [todo]="todo"></app-todo-item>
+    </ng-container>
+  </div>
+</div>
+
+

@@ -1,0 +1,13 @@
+div.row {
+  padding: 10px;
+}
+.card {
+  margin: 10px;
+}
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}

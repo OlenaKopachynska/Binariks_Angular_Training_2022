@@ -1,0 +1,10 @@
+<div class="todo-item-container">
+  <div (click)="changeStatus(todo)"><input type="checkbox" class="todo-checkbox" [checked]="todo.done"></div>
+  <ng-template [ngIf]="!todo.done">
+    <div><p>{{todo.text}}</p></div>
+  </ng-template>
+  <ng-template [ngIf]="todo.done">
+    <div><p appCrossedText>{{todo.text}}</p></div>
+  </ng-template>
+</div>
+

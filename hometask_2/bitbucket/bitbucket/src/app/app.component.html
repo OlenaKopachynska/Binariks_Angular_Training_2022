@@ -1,0 +1,9 @@
+<div class="container" >
+  <app-header></app-header>
+  <app-date></app-date>
+  <app-add-new-item (showList)="childEventClicked($event)"></app-add-new-item>
+  <app-add-new-item-button></app-add-new-item-button>
+  <app-todo-list *ngIf="showList"></app-todo-list>
+</div>
+
+
