@@ -1,0 +1,25 @@
+#progress-container {
+  height: 900px;
+  overflow: auto;
+}
+
+#progress {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  word-break: break-all;
+  overflow-y: auto;
+  height: 600%;
+  background-color: #cbcaca;
+
+}
+
+#progbar {
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 6px;
+    background: #7983ff;
+    z-index: 10000;
+  }
+

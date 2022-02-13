@@ -1,0 +1,28 @@
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="mortgage-amount">Mortgage Amount</label>
+      <input type="number" name="mortgage-amount" #mortgageAmount id="mortgage-amount">
+    </div>
+    <div class="form-control">
+      <label for="interest-rate">Interest Rate</label>
+      <input type="number" name="interest-rate"  #interest id="interest-rate">
+    </div>
+
+    <div class="form-control">
+      <label for="mortgage-length">Mortgage Length</label>
+      <input type="number" name="mortgage-length"  #mortgageLength
+             id="mortgage-length">
+    </div>
+    <div class="form-control">
+      <label for="down-payment">Down payment </label>
+      <input type="number" name="down-payment" #downPayment id="down-payment">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>Your expected monthly payment is: {{expected}}</div>
+  </form>
+
+</div>
