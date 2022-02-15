@@ -23,7 +23,7 @@
       </select>
     </div>
   </ng-container>
-  <div class="form-group skills" *ngFor="let item of Skill; let i=index">
+  <div class="form-group skills" *ngFor="let item of Knowledges; let i=index">
     <label>
       <input type="checkbox" [value]="item" (change)="onCheckboxChange($event)">
       {{item}}
@@ -32,5 +32,5 @@
 
   <app-password formControlName="Password"></app-password>
 
-  <button type="submit" [disabled]='!userForm.valid'>Submit</button>
+  <button type="submit" (click)="onSubmit()" [disabled]='!userForm.valid'>Submit</button>
 </form>

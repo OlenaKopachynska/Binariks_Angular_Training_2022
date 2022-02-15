@@ -13,7 +13,7 @@ export class ReactiveFormComponent implements OnInit {
 
   Country: any = ['Ukraine', 'Germany', 'USA', 'Spain']
   State: any = ['Arizona', 'California', 'Colorado', 'New York', 'Pennsylvania']
-  Skill: any = ["Angular", "HTML", "Typescript"]
+  Knowledges: any = ["Angular", "HTML", "Typescript"]
 
   constructor() {
   }
@@ -21,26 +21,24 @@ export class ReactiveFormComponent implements OnInit {
   ngOnInit() {
 
     this.userForm = new FormGroup({
-      Name: new FormControl('', ),
-      Email: new FormControl('', ),
-      Country: new FormControl('', ),
+      Name: new FormControl('',[Validators.required] ),
+      Email: new FormControl('', [Validators.required, Validators.email]),
+      Country: new FormControl('',[Validators.required] ),
       State: new FormControl('',),
-      Skill: new FormArray([], ),
+      Knowledges: new FormArray([],[Validators.required] ),
       Password: new FormControl('', [Validators.required]),
-      Sex: new FormControl('', ),
+      Sex: new FormControl('', [Validators.required]),
     });
-
-
   }
 
+  // check if country is USA then show state dropdown
   checkFirstDropdown($event: any) {
     if ($event.target.value === "3: USA")
       this.isUsa = true;
   }
 
   onCheckboxChange(e: any) {
-    const arr: FormArray = this.userForm.get('Skill') as FormArray;
-    console.log(e, "ggg")
+    const arr: FormArray = this.userForm.get('Knowledges') as FormArray;
     if (e.target.checked) {
       arr.push(new FormControl(e.target.value));
     } else {
