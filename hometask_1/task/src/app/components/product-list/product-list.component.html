@@ -1,0 +1,19 @@
+<app-add-product (onAddProduct)="addProduct($event)"></app-add-product>
+<table>
+  <tr>
+    <th >Title <fa-icon [ngClass]="rotateIconTitle ? 'fa-rotate-180' : 'fa-rotate-360'" (click)="sortByParam('title')" [icon]="faArrowDown"></fa-icon></th>
+    <th>Price <fa-icon [ngClass]="rotateIconPrice ? 'fa-rotate-180' : 'fa-rotate-360'" (click)="sortByParam('price')" [icon]="faArrowDown"></fa-icon></th>
+    <th>Category <fa-icon [ngClass]="rotateIconCategory ? 'fa-rotate-180' : 'fa-rotate-360'" (click)="sortByParam('category')" [icon]="faArrowDown"></fa-icon></th>
+    <th></th>
+  </tr>
+  <tr *ngFor=" let product of products">
+    <td >{{product.title}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.category}}</td>
+    <td>
+      <button (click)="onDelete(product)" type="button"
+              class="delete">Delete
+      </button>
+    </td>
+  </tr>
+</table>

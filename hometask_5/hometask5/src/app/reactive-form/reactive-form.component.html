@@ -1,0 +1,36 @@
+<form [formGroup]="userForm" (submit)="onSubmit()">
+  <div class="form-group">
+    <input class="form-input" type="text" placeholder="Name" formControlName="Name"/>
+  </div>
+  <div class="form-group">
+    <input class="form-input" type="email" placeholder="Email" formControlName="Email"/>
+  </div>
+  <div class="form-group">
+    <input type="radio" value='Male' formControlName="Sex">Male
+    <input type="radio" value='Female' formControlName="Sex">Female
+  </div>
+  <div class="form-group">
+    <select class="custom-select" formControlName="Country" (change)="checkFirstDropdown($event)">
+      <option value="" disabled>Country</option>
+      <option *ngFor="let country of Country" [ngValue]="country">{{country}}</option>
+    </select>
+  </div>
+  <ng-container *ngIf="isUsa">
+    <div class="form-group">
+      <select class="custom-select" formControlName="State">
+        <option value="" disabled>State</option>
+        <option *ngFor="let state of State" [ngValue]="state">{{state}}</option>
+      </select>
+    </div>
+  </ng-container>
+  <div class="form-group skills" *ngFor="let item of Skill; let i=index">
+    <label>
+      <input type="checkbox" [value]="item" (change)="onCheckboxChange($event)">
+      {{item}}
+    </label>
+  </div>
+
+  <app-password formControlName="Password"></app-password>
+
+  <button type="submit" [disabled]='!userForm.valid'>Submit</button>
+</form>

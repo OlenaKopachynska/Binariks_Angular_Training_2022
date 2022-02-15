@@ -1,0 +1,23 @@
+form {
+  display: inline-block;
+}
+
+form .form-group {
+  margin: 10px;
+  width:250px
+}
+
+form .form-group .form-input {
+  width: 100%;
+  height: 25px;
+
+}
+form .form-group .custom-select {
+  width: 100%;
+  height: 25px;
+}
+
+.skills {
+  text-align: left;
+}
+

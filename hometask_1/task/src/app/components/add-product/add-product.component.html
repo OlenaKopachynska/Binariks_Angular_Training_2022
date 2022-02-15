@@ -1,0 +1,22 @@
+<form (ngSubmit)="onFormSubmit()">
+  <div class="form-control">
+    <label for="title">Title</label>
+    <input type="text" name="title"  required minlength="10" [(ngModel)]="title" id="title" placeholder="add product title">
+  </div>
+  <div class="form-control">
+    <label for="price">Price</label>
+    <input type="number" name="price"  required [(ngModel)]="price" id="price" placeholder="add product price">
+  </div>
+  <div class="form-control">
+    <label for="category">Category</label>
+    <select id="category" name="category" required [(ngModel)]="category">
+      <option [ngValue]="undefined" hidden disabled>Select category</option>
+      <option value="electronics">Electronics</option>
+      <option value="jewelery">Jewelery</option>
+      <option value="men's clothing">Men's clothing</option>
+      <option value="women's clothing">women's clothing</option>
+    </select>
+  </div>
+  <div><input type="submit"  id="submitBtn" value="Save Product"/></div>
+</form>
+
