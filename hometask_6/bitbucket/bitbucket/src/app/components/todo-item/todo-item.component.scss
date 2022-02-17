@@ -1,0 +1,39 @@
+.todo-item-container {
+  height: 58px;
+  width: 510px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  padding: 15px;
+
+  .todo-item-info {
+    text-align: center;
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: #C4C4C4;
+    border-radius: 10px;
+    vertical-align: center;
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: 800;
+    }
+  }
+
+  div {
+    display: inline-block;
+    vertical-align: middle;
+
+    input {
+      width: 21px;
+      height: 21px;
+      accent-color: #000000;
+      margin-top: 5px;
+    }
+  }
+
+  p {
+    display: inline;
+    padding-left: 15px;
+  }
+}

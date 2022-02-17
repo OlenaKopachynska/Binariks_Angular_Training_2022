@@ -1,0 +1,27 @@
+#loginForm {
+  text-align: center;
+  margin-top: 100px;
+   div {
+     margin-top: 20px;
+   }
+  input {
+    padding-left: 10px;
+    height: 44px;
+    width: 304px;
+    border: 1px solid #434343;
+    border-radius: 6px;
+  }
+
+  button {
+
+    background: #434343;
+    border: 1px solid #434343;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 20px;
+    height: 55px;
+    width: 304px;
+    margin-top: 30px;
+    font-weight: 500;
+  }
+}

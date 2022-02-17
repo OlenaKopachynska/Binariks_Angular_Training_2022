@@ -1,0 +1,11 @@
+<div class="account-container">
+  <h2>{{currentUser.Username}}</h2>
+  <p>You have {{ uncompleted.length}} to complete
+  </p>
+  <p>You already completed: {{ completed.length}}!</p>
+
+  <app-add-new-item-button [buttonConfig]="BtnConfig"></app-add-new-item-button>
+  <button (click)="onLogout()">Log out</button>
+
+</div>
+

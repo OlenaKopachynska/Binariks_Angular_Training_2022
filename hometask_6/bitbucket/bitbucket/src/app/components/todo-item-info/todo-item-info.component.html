@@ -1,0 +1,8 @@
+<app-date></app-date>
+
+<div>
+  <h3>{{todo.text}} details</h3>
+  <p>Created: {{todo.createdAt | date:'E d MMMM, y'}}</p>
+  <p>{{todo.info || "This todo doesn't have additional info"}}</p>
+  <button type="submit" (click)="edit(todo)">Edit</button>
+</div>

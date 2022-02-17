@@ -1,0 +1,43 @@
+.add-form {
+  text-align: center;
+
+  input {
+    height: 44px;
+    width: 363px;
+    border: 1px solid #434343;
+    border-radius: 6px;
+  }
+
+  div {
+    display: inline;
+    margin: 3px
+  }
+
+  button {
+    height: 44px;
+    width: 64px;
+    margin: 3px;
+    border: 1px solid #434343;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .add {
+    background: #434343;
+    color: #FFFFFF;
+  }
+
+  .cancel {
+    background: #FFFFFF;
+    color: #434343;
+
+  }
+
+}
+
+
+
+
+
+

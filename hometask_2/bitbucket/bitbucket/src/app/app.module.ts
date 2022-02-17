@@ -16,26 +16,30 @@ import { AddNewItemIconComponent } from './components/add-new-item-icon/add-new-
 import { CrossedTextDirective } from './directives/crossed-text.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodoListComponent,
-    TodoItemComponent,
-    HeaderComponent,
-    DateComponent,
-    AddNewItemComponent,
-    AddNewItemButtonComponent,
-    AddNewItemIconComponent,
-    CrossedTextDirective,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    FontAwesomeModule
+    declarations: [
+        AppComponent,
+        TodoListComponent,
+        TodoItemComponent,
+        HeaderComponent,
+        DateComponent,
+        AddNewItemComponent,
+        AddNewItemButtonComponent,
+        AddNewItemIconComponent,
+        CrossedTextDirective,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        FontAwesomeModule
 
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    ],
+    providers: [],
+    exports: [
+        AddNewItemComponent,
+        AddNewItemButtonComponent
+    ],
+    bootstrap: [AppComponent]
 })
 
 export class AppModule { }

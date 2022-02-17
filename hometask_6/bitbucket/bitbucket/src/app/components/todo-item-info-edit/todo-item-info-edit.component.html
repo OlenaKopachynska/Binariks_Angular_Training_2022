@@ -1,0 +1,23 @@
+<app-date></app-date>
+
+<form class="edit-form">
+  <div>
+    <input
+    type="text"
+    name="text"
+    [(ngModel)]="todo_name"
+    id="todoName"
+    placeholder="{{todo.text}}"
+  /></div>
+  <div>
+    <input
+    type="text"
+    name="text"
+    [(ngModel)]="todo_info"
+    id="todoInfo"
+    placeholder="Add additional info"
+  /></div>
+
+  <button class="add" type="submit" (click)="onSave()">Save</button>
+
+</form>

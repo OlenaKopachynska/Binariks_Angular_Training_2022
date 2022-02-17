@@ -1,0 +1,14 @@
+<div id="loginForm">
+  <form [formGroup]="loginForm" (submit)="onSubmit()">
+    <div>
+      <input type="text" placeholder="User name" formControlName="Username"/>
+    </div>
+    <div>
+      <input type="password" placeholder="Password" formControlName="Password"/>
+    </div>
+
+    <button type="submit" [disabled]='!loginForm.valid'>Login</button>
+  </form>
+</div>
+
+
