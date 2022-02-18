@@ -7,7 +7,8 @@ import {UserService} from "./user.service";
 })
 export class UiService {
 
-  constructor(private uService: UserService) { }
+  constructor() {
+  }
 
   private _addNewItemIconSource = new BehaviorSubject<boolean>(true);
   private _addFormSource = new BehaviorSubject<boolean>(false);
@@ -22,9 +23,8 @@ export class UiService {
     this._addFormSource.next(value);
   }
 
-  showAccountIcon(_: boolean) {
-    let u = this.uService.getCurrentUser()
-    u ? this._showAccountIconSource.next(true) : this._showAccountIconSource.next(false)
+  showAccountIcon(val: boolean) {
+      this._showAccountIconSource.next(val);
   }
 
   toggleAddNewItemIcon(value: boolean) {

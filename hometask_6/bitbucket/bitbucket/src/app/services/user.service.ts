@@ -26,7 +26,6 @@ export class UserService {
 
   login(user: any): Observable<any> {
 
-
     sessionStorage.setItem('currentUser', JSON.stringify(user));
 
     this.router.navigate(['/home']);

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../services/user.service";
 import {ActivatedRoute} from "@angular/router";
-import {UiService} from "../../services/ui.service";
 
 @Component({
   selector: 'app-account',
@@ -20,7 +19,7 @@ todoArr: any;
     btn_title: 'Add item'
   }
 
-  constructor(private userService: UserService, private route: ActivatedRoute, private _uiService: UiService) {
+  constructor(private userService: UserService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
