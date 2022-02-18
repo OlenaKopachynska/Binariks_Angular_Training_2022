@@ -11,7 +11,7 @@ export class UiService {
 
   private _addNewItemIconSource = new BehaviorSubject<boolean>(true);
   private _addFormSource = new BehaviorSubject<boolean>(false);
-  private _showAccountIconSource = new BehaviorSubject<boolean>(true);
+  private _showAccountIconSource = new BehaviorSubject<boolean>(false);
 
 
   toggleAddForm$ = this._addFormSource.asObservable();
@@ -24,7 +24,6 @@ export class UiService {
 
   showAccountIcon(_: boolean) {
     let u = this.uService.getCurrentUser()
-    console.log(u, "uuuu")
     u ? this._showAccountIconSource.next(true) : this._showAccountIconSource.next(false)
   }
 

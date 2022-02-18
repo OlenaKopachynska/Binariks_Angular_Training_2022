@@ -14,8 +14,6 @@ export class TodoService {
       this.toDoArr = JSON.parse(todo_array)
     }
 
-    console.log(this.toDoArr, "from  getToDo() service")
-    //this.toDoArr = JSON.parse(localStorage.getItem('todos');)
     return this.toDoArr;
   }
 
@@ -46,9 +44,6 @@ export class TodoService {
     }
 
     sessionStorage.setItem('todos', JSON.stringify(this.toDoArr));
-
-    //return todo
-
   }
 
   addToDo(todo: any) {

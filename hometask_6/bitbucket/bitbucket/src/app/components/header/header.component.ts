@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
 import {UserService} from "../../services/user.service";
 import {UiService} from "../../services/ui.service";
 
@@ -9,7 +9,7 @@ import {UiService} from "../../services/ui.service";
 })
 
 export class HeaderComponent implements OnInit {
-
+  @Input() parentData: any;
   showAccLink!: boolean;
   userLetter!: any
 
@@ -17,9 +17,10 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this._uiService.showAccountIcon$.subscribe(val => this.showAccLink = val)
+  }
 
+  ngOnChanges(_: SimpleChanges) {
     let user = this._userService.getCurrentUser()
     if (user) this.userLetter = user.Username.charAt(0).toUpperCase()
   }

@@ -1,8 +1,16 @@
 <div class="account-container">
   <h2>{{currentUser.Username}}</h2>
-  <p>You have {{ uncompleted.length}} to complete
-  </p>
-  <p>You already completed: {{ completed.length}}!</p>
+  <ng-template [ngIf]="todoArr.length" [ngIfElse]="noItems">
+    <p>You have {{ uncompleted.length}} to complete
+    </p>
+    <p>You already completed: {{ completed.length}}!</p>
+  </ng-template>
+
+  <ng-template #noItems>
+    <p>You don't have any items yet. But you could create!
+  </ng-template>
+
+
 
   <app-add-new-item-button [buttonConfig]="BtnConfig"></app-add-new-item-button>
   <button (click)="onLogout()">Log out</button>

@@ -37,14 +37,15 @@ export class UserService {
   logout() {
 
     sessionStorage.clear();
-
     this.router.navigate(['/login']);
+    window.location.reload();
+
     this.userSubject.next(null);
   }
 
   isLoggedIn(): boolean {
-    let loggedIn: boolean = false;
 
+    let loggedIn: boolean = false;
     let u = sessionStorage.getItem('currentUser');
 
     if(u) {
